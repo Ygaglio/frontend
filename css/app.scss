@@ -1,0 +1,72 @@
+$color: #4ba6a3;
+
+.square{
+  font-size: 20px;
+  color:blue;
+  width: 100px;
+  height: 100px;
+  background-color: #00008B;
+  transform: translateX(50px);
+}
+
+body{
+  font-family: Roboto;
+}
+.field{
+  position: relative;
+  height: 36px;
+  padding: 8px 0 4px 0;
+  margin: 15px 0px;
+}
+
+.field-label{
+  position: relative;
+  margin: 0;
+  color: lighten(#000, 75);
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+  font-size: 16px;
+  transform: translateY(24px);
+  transform-origin: 0 50%;
+  transition: transform 0.3s;
+}
+
+.field-input{
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  display: block;
+  font-family: Roboto;
+  font-size: 16px;
+  height: 20px;
+  line-height: 16px;
+  outline: medium none;
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.field::after, .field::before{
+  content:'';
+  height: 2px;
+  background-color:#e7e7e7;
+  width: 100%;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+.field::after{
+  background-color: $color;
+  transform: scaleX(0);
+  transition: transform 0.3s
+}
+.is-focused .field-label{
+  color: $color;
+}
+.has-label .field-label{
+  transform: translateY(0) scale(0.75);
+}
+.field.is-focused::after{
+  transform: scaleX(1);
+}

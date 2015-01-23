@@ -1,0 +1,32 @@
+.icon{
+    display:inline-block;
+    background-image:url('img/sprite.png');
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and ( min--moz-device-pixel-ratio: 2),
+    only screen and ( -o-min-device-pixel-ratio: 2/1),
+    only screen and ( min-device-pixel-ratio: 2),
+    only screen and ( min-resolution: 192dpi),
+    only screen and ( min-resolution: 2dppx) {
+    background-image:url('img/spritesheet@2x.png');
+    background-size: 64px 55px;
+    }
+}
+.icon-close13{
+@extend .icon;
+width: 32px;
+height: 23px;
+background-position: 0px -32px
+}
+.icon-facebook29{
+@extend .icon;
+width: 32px;
+height: 32px;
+background-position: 0px 0px
+}
+.icon-home168{
+@extend .icon;
+width: 32px;
+height: 28px;
+background-position: -32px 0px
+}
